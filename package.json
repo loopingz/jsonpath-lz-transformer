@@ -1,6 +1,6 @@
 {
   "name": "jsonpath-lz-transformer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Transform object to another with JSONPath",
   "main": "lib/index.js",
   "repository": "https://github.com/loopingz/jsonpath-transformer",
