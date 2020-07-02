@@ -1,0 +1,42 @@
+{
+  "name": "jsonpath-transformer",
+  "version": "0.0.0",
+  "description": "Transform object to another with JSONPath",
+  "main": "lib/index.js",
+  "repository": "https://github.com/loopingz/jsonpath-transformer",
+  "author": "Remi Cattiau <remi@cattiau.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/jsonpath": "^0.2.0",
+    "jsonpath": "^1.0.2"
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "report-dir": "./reports",
+    "reporter": [
+      "html",
+      "lcov",
+      "json"
+    ]
+  },
+  "scripts": {
+    "pretest": "tsc",
+    "test": "nyc mocha --recursive --exit --timeout=100000 -r ts-node/register src/*.spec.ts",
+    "release": "standard-version"
+  },
+  "homepage": "https://loopingz.github.io/mdocr",
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@testdeck/mocha": "^0.1.0",
+    "@types/json-schema": "^7.0.3",
+    "@types/node": "^12.0.0",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": ">=6.1.4",
+    "nyc": "^15.0.1",
+    "prettier": "^2.0.5",
+    "remap-istanbul": "^0.13.0",
+    "source-map-support": "^0.5.12",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.7.4"
+  }
+}
